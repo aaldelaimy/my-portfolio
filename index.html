@@ -9,28 +9,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="logo">Ayoob Al-Delaimy</div>
+    <nav class="motion-nav">
+        <div class="logo" data-motion="slide-in">Ayoob Al-Delaimy</div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-motion="fade-in">Home</a></li>
+            <li><a href="#about" data-motion="fade-in">About</a></li>
+            <li><a href="#experience" data-motion="fade-in">Experience</a></li>
+            <li><a href="#projects" data-motion="fade-in">Projects</a></li>
+            <li><a href="#contact" data-motion="fade-in">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Hi, I'm <span class="highlight">Ayoob Al-Delaimy</span></h1>
-            <p>Computer Engineering Student & Software Engineer</p>
+        <div class="hero-content" data-motion="scale-in">
+            <h1 class="motion-text">Hi, I'm <span class="highlight motion-highlight">Ayoob Al-Delaimy</span></h1>
+            <p class="motion-text">Computer Engineering Student & Software Engineer</p>
             <div class="hero-buttons">
-                <a href="#contact" class="cta-button">Get in Touch</a>
-                <a href="#experience" class="cta-button secondary">View Experience</a>
+                <a href="#contact" class="cta-button motion-button">Get in Touch</a>
+                <a href="#experience" class="cta-button secondary motion-button">View Experience</a>
             </div>
         </div>
     </section>
@@ -119,200 +120,101 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2 data-aos="fade-up">Projects</h2>
+        <h2 class="section-title motion-title">Projects</h2>
         <div class="project-grid">
-            <div class="project-card" data-aos="fade-up">
+            <div class="project-card motion-card" 
+                data-motion="slide-up"
+                data-delay="0">
                 <div class="project-content">
-                    <h3>Smart Wardrobe Management System</h3>
-                    <p>IoT-Powered Intelligent Clothing Selection System</p>
-                    <ul>
-                        <li>Developed full-stack IoT solution with real-time environmental monitoring</li>
-                        <li>Integrated ESP32 sensors with MQTT, FastAPI, MySQL, and Docker</li>
-                        <li>Created secure web interface with smart clothing recommendations</li>
-                        <li>Implemented edge computing on ESP32 for optimized data processing</li>
+                    <h3 class="motion-text">Smart Wardrobe Management System</h3>
+                    <p class="motion-text">IoT-Powered Intelligent Clothing Selection System</p>
+                    <ul class="motion-list">
+                        <li><strong>Led</strong> the development of an IoT-powered wardrobe management system, enabling <strong>real-time environmental monitoring</strong> for intelligent clothing selection.</li>
+                        <li><strong>Designed and implemented</strong> a full-stack solution integrating <strong>ESP32 sensors, MQTT, FastAPI, MySQL, and Docker</strong>, with external weather API support.</li>
+                        <li><strong>Developed a secure web interface</strong> with real-time data visualization and <strong>smart clothing recommendations</strong>, serving multiple users.</li>
+                        <li><strong>Enhanced system scalability and efficiency</strong>, implementing <strong>edge computing on ESP32</strong> for pre-processed sensor data and optimizing cloud workload distribution.</li>
                     </ul>
-                    <div class="tech-stack">
+                    <div class="tech-stack motion-tech">
                         <span>ESP32</span>
                         <span>FastAPI</span>
                         <span>MQTT</span>
                         <span>MySQL</span>
                         <span>Docker</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/aaldelaimy/Smart-Wardrobe-IOT" target="_blank">GitHub</a>
+                    <div class="project-links motion-links">
+                        <a href="https://github.com/aaldelaimy/Smart-Wardrobe-IOT" target="_blank" class="motion-link">GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-card motion-card"
+                data-motion="slide-up"
+                data-delay="0.1">
                 <div class="project-content">
-                    <h3>DALL·E Image Generation Platform</h3>
-                    <p>AI-Powered Image Generation & Sharing Community</p>
-                    <ul>
-                        <li>Built full-stack web application using MERN stack</li>
-                        <li>Integrated OpenAI's API for image generation</li>
-                        <li>Developed searchable community gallery with advanced features</li>
-                        <li>Implemented user authentication and image sharing capabilities</li>
+                    <h3 class="motion-text">DALL·E Image Generation Platform</h3>
+                    <p class="motion-text">AI-Powered Image Generation & Sharing Community</p>
+                    <ul class="motion-list">
+                        <li>Built a <strong>full-stack web application</strong> using the <strong>MERN stack (MongoDB, Express, React, Node.js)</strong> to generate and share AI-generated images.</li>
+                        <li>Integrated <strong>OpenAI's API</strong> to allow users to input a script, generate images, and share them with the community, with the ability to search for shared images.</li>
                     </ul>
-                    <div class="tech-stack">
+                    <div class="tech-stack motion-tech">
                         <span>MongoDB</span>
                         <span>Express</span>
                         <span>React</span>
                         <span>Node.js</span>
                         <span>OpenAI API</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://ai-image-search-five.vercel.app" target="_blank">Live Demo</a>
-                        <a href="https://github.com/aaldelaimy/AI-Image-Search" target="_blank">GitHub</a>
+                    <div class="project-links motion-links">
+                        <a href="https://ai-image-search-five.vercel.app" target="_blank" class="motion-link">Live Demo</a>
+                        <a href="https://github.com/aaldelaimy/AI-Image-Search" target="_blank" class="motion-link">GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card motion-card"
+                data-motion="slide-up"
+                data-delay="0.2">
                 <div class="project-content">
-                    <h3>MNIST Digit Classification System</h3>
-                    <p>Deep Learning System for Handwritten Digit Recognition</p>
-                    <ul>
-                        <li>Achieved 98% accuracy on MNIST dataset with optimized training pipeline</li>
-                        <li>Reduced training time by 40% through efficient data loading and preprocessing</li>
-                        <li>Implemented automated testing and validation framework with visualization tools</li>
-                        <li>Optimized CNN architecture and hyperparameters for improved performance</li>
+                    <h3 class="motion-text">MNIST Digit Classification System</h3>
+                    <p class="motion-text">Deep Learning System for Handwritten Digit Recognition</p>
+                    <ul class="motion-list">
+                        <li><strong>Developed</strong> a deep learning system achieving <strong>98% accuracy</strong> on the MNIST dataset by optimizing the training pipeline, reducing training time by <strong>40%</strong>.</li>
+                        <li><strong>Implemented</strong> a robust testing and validation framework with <strong>automated pipelines and visualization tools</strong>, ensuring deployment-ready performance.</li>
+                        <li><strong>Engineered</strong> an efficient <strong>custom data loading and preprocessing system</strong>, reducing computational overhead by <strong>40%</strong> while maintaining high accuracy.</li>
+                        <li><strong>Optimized model architecture</strong> by fine-tuning hyperparameters and leveraging <strong>convolutional neural networks (CNNs)</strong>, improving both training efficiency and generalization.</li>
                     </ul>
-                    <div class="tech-stack">
+                    <div class="tech-stack motion-tech">
                         <span>Python</span>
                         <span>PyTorch</span>
                         <span>Deep Learning</span>
                         <span>Computer Vision</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/aaldelaimy/Handwriting-CNN" target="_blank">GitHub</a>
+                    <div class="project-links motion-links">
+                        <a href="https://github.com/aaldelaimy/Handwriting-CNN" target="_blank" class="motion-link">GitHub</a>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="project-card motion-card"
+                data-motion="slide-up"
+                data-delay="0.3">
                 <div class="project-content">
-                    <h3>MoodScript</h3>
-                    <p>Movie Quote Generator Based on Emotion</p>
-                    <ul>
+                    <h3 class="motion-text">MoodScript</h3>
+                    <p class="motion-text">Movie Quote Generator Based on Emotion</p>
+                    <ul class="motion-list">
                         <li>Developed front-end web app using HTML, CSS, and JavaScript</li>
                         <li>Currently expanding with Node.js and MongoDB</li>
                         <li>Implementing emotion analysis API for quote matching</li>
                     </ul>
-                    <div class="tech-stack">
+                    <div class="tech-stack motion-tech">
                         <span>HTML/CSS</span>
                         <span>JavaScript</span>
                         <span>Node.js</span>
                         <span>MongoDB</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://movie-mood-quotes.vercel.app/" target="_blank">Live Demo</a>
-                        <a href="https://github.com/aaldelaimy/movie-quotes-site" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-content">
-                    <h3>Custom Shell with Built-ins and Batch Mode</h3>
-                    <p>Unix-style Shell Implementation</p>
-                    <ul>
-                        <li>Developed a simplified Unix-style shell with built-in commands (cd, exit, history)</li>
-                        <li>Implemented external process execution using fork() and execvp()</li>
-                        <li>Supported both interactive terminal usage and script-based batch execution</li>
-                        <li>Added persistent session history following Bash-style conventions</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span>C</span>
-                        <span>Systems Programming</span>
-                        <span>Unix</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/aaldelaimy/Custom-Shell-with-Built-ins-and-Batch-Mode" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-content">
-                    <h3>Memory Allocator with Heap Introspection</h3>
-                    <p>Custom Memory Management System</p>
-                    <ul>
-                        <li>Built a custom malloc/free implementation with best-fit allocation policy</li>
-                        <li>Implemented 16-byte alignment enforcement and block coalescing</li>
-                        <li>Developed heap visualization tool for usage inspection</li>
-                        <li>Practiced low-level memory operations and pointer arithmetic</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span>C</span>
-                        <span>Memory Management</span>
-                        <span>Systems Programming</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/aaldelaimy/Memory-Allocator-with-Heap-Introspection" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                <div class="project-content">
-                    <h3>HTTP Chat Server with Editable Posts</h3>
-                    <p>Networked Chat Platform</p>
-                    <ul>
-                        <li>Created a plain-text chat platform with HTTP-style endpoints</li>
-                        <li>Implemented post, react, edit, and reset functionality</li>
-                        <li>Developed message history and reaction tracking system</li>
-                        <li>Enforced size and formatting constraints for messages</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span>C</span>
-                        <span>Networking</span>
-                        <span>HTTP</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/aaldelaimy/C-Based-Chat-Server" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-                <div class="project-content">
-                    <h3>Single-Character SHA256 Variation Matcher</h3>
-                    <p>Password Cracking Tool</p>
-                    <ul>
-                        <li>Designed a tool to compare SHA256 hashes of one-character mutations</li>
-                        <li>Limited mutations to single-digit substitutions and case flips</li>
-                        <li>Implemented efficient brute-force techniques</li>
-                        <li>Applied cryptographic hashing and string manipulation</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span>C</span>
-                        <span>Security</span>
-                        <span>Cryptography</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/aaldelaimy/Single-Character-SHA256-Variation-Matcher" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-                <div class="project-content">
-                    <h3>UTF-8 Codepoint Navigator and Encoder</h3>
-                    <p>Text Encoding Utility</p>
-                    <ul>
-                        <li>Implemented UTF-8 string parsing and codepoint manipulation</li>
-                        <li>Developed codepoint increment and re-encoding functionality</li>
-                        <li>Practiced byte-level string manipulation</li>
-                        <li>Handled variable-width character encoding/decoding</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span>C</span>
-                        <span>Encoding</span>
-                        <span>Text Processing</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/aaldelaimy/UTF-8-Codepoint-Navigator-and-Encoder" target="_blank">GitHub</a>
+                    <div class="project-links motion-links">
+                        <a href="https://movie-mood-quotes.vercel.app/" target="_blank" class="motion-link">Live Demo</a>
+                        <a href="https://github.com/aaldelaimy/movie-quotes-site" target="_blank" class="motion-link">GitHub</a>
                     </div>
                 </div>
             </div>
@@ -321,26 +223,26 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2 data-aos="fade-up">Get in Touch</h2>
-        <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-info">
-                <a href="mailto:awaldelaimy@gmail.com" class="contact-item">
+        <h2 class="section-title motion-title">Get in Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info motion-contact">
+                <a href="mailto:awaldelaimy@gmail.com" class="contact-item motion-item">
                     <i class="fas fa-envelope"></i>
                     <span>awaldelaimy@gmail.com</span>
                 </a>
-                <a href="tel:8589880340" class="contact-item">
+                <a href="tel:8589880340" class="contact-item motion-item">
                     <i class="fas fa-phone"></i>
                     <span>(858) 988-0340</span>
                 </a>
             </div>
-            <div class="social-links" data-aos="fade-up" data-aos-delay="200">
-                <a href="https://github.com/aaldelaimy" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ayoobaldelaimy/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <div class="social-links motion-social">
+                <a href="https://github.com/aaldelaimy" target="_blank" class="motion-social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ayoobaldelaimy/" target="_blank" class="motion-social-link"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="motion-footer">
         <p>&copy; 2024 Ayoob Al-Delaimy. All rights reserved.</p>
     </footer>
 
