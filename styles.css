@@ -24,12 +24,23 @@
     scroll-behavior: smooth;
 }
 
+body, html {
+    height: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.8;
     color: var(--text-color);
     background-color: var(--background-color);
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 /* Typography */
@@ -764,6 +775,9 @@ nav {
     transform: translateY(20px);
     animation: fadeIn 0.5s var(--animation-timing) forwards;
     animation-delay: 0.5s;
+    flex-shrink: 0;
+    margin-top: 0;
+    padding-bottom: 0;
 }
 
 /* Staggered Animations */
