@@ -26,6 +26,8 @@
 
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -37,12 +39,15 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 main {
     flex: 1 0 auto;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+    overflow-y: auto;
 }
 
 /* Typography */
@@ -929,8 +934,8 @@ footer {
     color: var(--text-color);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex-shrink: 0;
-    margin-top: 0;
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
 
 footer p {
@@ -981,4 +986,10 @@ footer p {
     .project-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Remove bottom margin from the last section before the footer */
+section:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
