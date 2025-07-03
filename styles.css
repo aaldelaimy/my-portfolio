@@ -24,7 +24,7 @@
     scroll-behavior: smooth;
 }
 
-body, html {
+html, body {
     height: 100%;
 }
 
@@ -884,10 +884,16 @@ nav {
 }
 
 .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
+    gap: 1em;
+}
+
+.social-links li {
+    margin: 0;
+    padding: 0;
 }
 
 .social-links a {
@@ -918,6 +924,9 @@ footer {
     background: var(--background-color);
     color: var(--text-color);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    margin-top: 0;
+    padding-bottom: 0;
 }
 
 footer p {
