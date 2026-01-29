@@ -23,6 +23,7 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     height: 100%;
+    overflow-y: hidden;
 }
 
 body {
@@ -31,26 +32,24 @@ body {
     color: var(--text-light);
     background: var(--bg-dark);
     overflow-x: hidden;
-    overflow-y: auto;
-    min-height: 100vh;
+    overflow-y: hidden;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-weight: 400;
 }
 
-html.has-expanded-section,
-body.has-expanded-section {
-    overflow-y: auto;
-}
-
 .hero {
-    min-height: 100vh;
+    min-height: 100%;
+    height: 100%;
     padding: 2rem;
     background: var(--bg-dark);
     position: relative;
     display: flex;
     flex-direction: column;
-    overflow: visible;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 .hero::before {
