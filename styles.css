@@ -21,7 +21,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100%;
 }
 
@@ -30,8 +30,9 @@ body {
     line-height: 1.7;
     color: var(--text-light);
     background: var(--bg-dark);
-    overflow: hidden;
-    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -39,7 +40,7 @@ body {
 
 html.has-expanded-section,
 body.has-expanded-section {
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .hero {
@@ -86,12 +87,16 @@ body.has-expanded-section {
 }
 
 .hero-header {
-    position: absolute;
-    top: 4.5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
     text-align: center;
     z-index: 10;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 1.5rem auto;
+    padding: 0 1.25rem;
 }
 
 .hero-header h1 {
@@ -454,9 +459,8 @@ footer {
     }
 
     .hero-header {
-        position: static;
-        text-align: center;
-        margin-bottom: 1.5rem;
+        max-width: 100%;
+        padding: 0 0.75rem;
     }
 
     .hero-header h1 {
